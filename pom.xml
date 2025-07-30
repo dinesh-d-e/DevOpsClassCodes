@@ -90,72 +90,72 @@
             <version>1.9.2</version>
             <type>jar</type>
         </dependency>
-		
-				<!-- LOGGING -->
-		<dependency>
-	<groupId>log4j</groupId>
-	<artifactId>log4j</artifactId>
-	<version>1.2.9</version>
+
+                                <!-- LOGGING -->
+                <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.9</version>
 </dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>1.7.7</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-simple</artifactId>
-			<version>1.7.7</version>
-		</dependency>
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<version>1.7.7</version>
-		</dependency>
+                <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                        <version>1.7.7</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                        <version>1.7.7</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                        <version>1.7.7</version>
+                </dependency>
 
-				<!-- TESTING -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.7</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<!-- COMMONS -->
-		<dependency>
-			<groupId>commons-httpclient</groupId>
-			<artifactId>commons-httpclient</artifactId>
-			<version>3.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.1</version>
-		</dependency>
-
-		<!-- JSON -->
-		<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20140107</version>
-		</dependency>
-		<dependency>
-			<groupId>org.codehaus.jackson</groupId>
-			<artifactId>jackson-jaxrs</artifactId>
-			<version>1.9.4</version>
-		</dependency>
-
-		<!-- XML -->
-		<dependency>
-			<groupId>com.sun.xml.security</groupId>
-			<artifactId>xml-security-impl</artifactId>
-			<version>1.0</version>
-		</dependency>
+                                <!-- TESTING -->
+                <dependency>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                        <version>4.7</version>
+                        <scope>test</scope>
+                </dependency>
 
 
-		</dependencies>
+                <!-- COMMONS -->
+                <dependency>
+                        <groupId>commons-httpclient</groupId>
+                        <artifactId>commons-httpclient</artifactId>
+                        <version>3.1</version>
+                </dependency>
+
+                <dependency>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>commons-lang3</artifactId>
+                        <version>3.1</version>
+                </dependency>
+
+                <!-- JSON -->
+                <dependency>
+                        <groupId>org.json</groupId>
+                        <artifactId>json</artifactId>
+                        <version>20140107</version>
+                </dependency>
+                <dependency>
+                        <groupId>org.codehaus.jackson</groupId>
+                        <artifactId>jackson-jaxrs</artifactId>
+                        <version>1.9.4</version>
+                </dependency>
+
+                <!-- XML -->
+                <dependency>
+                        <groupId>com.sun.xml.security</groupId>
+                        <artifactId>xml-security-impl</artifactId>
+                        <version>1.0</version>
+                </dependency>
+
+
+                </dependencies>
 
     <build>
         <plugins>
@@ -168,7 +168,7 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-		<plugin>
+                <plugin>
     <groupId>org.jacoco</groupId>
     <artifactId>jacoco-maven-plugin</artifactId>
     <version>0.8.11</version> <!-- Use latest -->
@@ -192,49 +192,49 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.2.3.v20140905</version>
             </plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
-				<configuration>
-					<parallel>methods</parallel>
-					<threadCount>10</threadCount>
-					<includes>
-						<include>**/Test*.java</include>
-						<include>**/Test.java</include>
-						<include>**/TestCase.java</include>
-					</includes>
-					<excludes>
-						<exclude>**/*Abstract*Test.java</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
+
+                        <plugin>
+                                <groupId>org.apache.maven.plugins</groupId>
+                                <artifactId>maven-surefire-plugin</artifactId>
+                                <version>2.19.1</version>
+                                <configuration>
+                                        <parallel>methods</parallel>
+                                        <threadCount>10</threadCount>
+                                        <includes>
+                                                <include>**/Test*.java</include>
+                                                <include>**/Test.java</include>
+                                                <include>**/TestCase.java</include>
+                                        </includes>
+                                        <excludes>
+                                                <exclude>**/*Abstract*Test.java</exclude>
+                                        </excludes>
+                                </configuration>
+                        </plugin>
 
         </plugins>
-		<finalName>addressbook</finalName>
+                <finalName>addressbook</finalName>
     </build>
-	
-	  
+
+          
     <reporting>
     <plugins>
-     	 <plugin>
-        	<groupId>org.apache.maven.plugins</groupId>
-       	 	<artifactId>maven-surefire-report-plugin</artifactId>
-       	 	<version>2.19.1</version>
-     	 </plugin>
- 	 <plugin>
-       		<groupId>org.jacoco</groupId>
-        	<artifactId>jacoco-maven-plugin</artifactId>
-       		<reportSets>
-          		<reportSet>
-            			<reports>
-	              			<!-- select non-aggregate reports -->
-              			<report>report</report>
-            			</reports>
-          		</reportSet>
-        	</reportSets>
-      	</plugin>
+         <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.19.1</version>
+         </plugin>
+         <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <reportSets>
+                        <reportSet>
+                                <reports>
+                                        <!-- select non-aggregate reports -->
+                                <report>report</report>
+                                </reports>
+                        </reportSet>
+                </reportSets>
+        </plugin>
 </plugins>
   </reporting>
   
